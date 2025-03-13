@@ -13,9 +13,9 @@ int main()
     if (result == 0)
     {
         const SymbolParser symbolParser{ pdbPath };
-        const auto ldrpHandleTlsDataAddress = symbolParser.GetSymbolRva( "LdrpHandleTlsData" );
+        const auto ldrpHandleTlsDataOffset = symbolParser.GetSymbolRva( "LdrpHandleTlsData" );
 
-        std::printf( "LdrpHandleTlsData address: %X\n", ldrpHandleTlsDataAddress );
+        std::printf( "LdrpHandleTlsData offset: %X\n", ldrpHandleTlsDataOffset );
     }
     else
         std::printf( "Failed download PDB.\n" );
